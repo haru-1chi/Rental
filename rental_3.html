@@ -106,10 +106,9 @@
         }
 
         img.battery {
-            width: 10%;
+            width: 100%;
             height: auto;
             object-fit: contain;
-            align-self: start;
         }
 
         .container-detail {
@@ -121,14 +120,13 @@
             margin-bottom: 2rem;
 
         }
-        
+
         .detail {
             width: 100%;
             max-width: 400px;
             display: flex;
             flex-direction: row;
             justify-content: space-between;
-            align-items: center;
         }
 
         .detail-status {
@@ -245,7 +243,8 @@
                 <div class="detail">
                     <img src="./public/Rectangle 6167.svg" alt="Main Image">
                     <div class="detail-body"></div>
-                    <img src="./public/Vector (1).svg" alt="Battery Icon" class="battery">
+                    <div class="battery-level">
+                    </div>
                 </div>
                 <div class="detail-status">
                     <h3>ชำระเงินเรียบร้อย</h3>
@@ -257,7 +256,6 @@
                 สแกน QR-Code รถ
             </button>
         </div>
-    </div>
 
 </body>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
@@ -291,6 +289,28 @@
             }
         ];
 
+        let battery_level = [
+            {
+                id: 1,
+                value: "100%",
+            },
+            {
+                id: 2,
+                value: "75%",
+            },
+            {
+                id: 3,
+                value: "50%",
+            },
+            {
+                id: 4,
+                value: "25%",
+            },
+            {
+                id: 5,
+                value: "0%",
+            }
+        ];
 
         specList.forEach((item, index) => {
             $(".detail-body").append(`
@@ -299,6 +319,17 @@
             </div>
         `);
         });
+
+        let index = 2;
+
+        let item = battery_level[index];
+
+        $(".battery-level").append(`
+          <div>
+              <img src="./public/Vector (1).svg" alt="Battery Icon" class="battery">
+               <p class="kanit text-sm">${item.value}</p>
+             </div>
+         `);
     });
 
 </script>
