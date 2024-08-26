@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rental_7</title>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@500&display=swap" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous" />
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
+        crossorigin="anonymous"></script>
+    <style>
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 10px;
+            width: 100%;
+            max-width: 347px;
+            border-bottom: #E3E3E3 solid 1px;
+            padding-bottom: 1rem;
+        }
+
+        .container-fluid {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+            padding-top: 1rem;
+        }
+
+        h2 {
+            font-family: Kanit;
+            font-size: 16px;
+            font-weight: 300;
+            line-height: 20px;
+            text-align: left;
+        }
+
+        h3 {
+            font-family: Kanit;
+            font-size: 16px;
+            font-weight: 300;
+            line-height: 20px;
+            text-align: left;
+            color: #007940;
+        }
+
+        h4 {
+            font-family: Kanit;
+            font-size: 14px;
+            font-weight: 275;
+            line-height: 20px;
+            text-align: left;
+            color: #000000;
+        }
+
+        h5 {
+            margin: 0;
+            font-family: Kanit;
+            font-size: 10px;
+            font-weight: 300;
+            line-height: 20px;
+            text-align: left;
+            color: #7D756C;
+        }
+
+        p {
+            margin: 0;
+            font-family: Kanit;
+            font-size: 10px;
+            font-weight: 300;
+            line-height: 20px;
+            text-align: left;
+            color: #000000;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 400px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .container-rentDetail {
+            width: 100%;
+            max-width: 400px;
+            display: flex;
+            flex-direction: row;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        .btn-custom {
+            font-family: Kanit;
+            background-color: #fc6336;
+            color: white;
+            border: none;
+            padding: 10px 28px;
+            border-radius: 10px;
+            font-size: 16px;
+            align-items: center;
+            text-align: center;
+            cursor: pointer;
+            box-shadow: #b9b9b9 0px 2px 10px 0px;
+        }
+
+        .svg-share {
+            margin-right: 0.5rem;
+        }
+
+        .rental-info {
+            display: grid;
+            grid-template-columns: auto auto auto;
+            gap: 10px;
+            align-items: center;
+        }
+
+        .info-block {
+            display: contents;
+        }
+
+        .label {
+            color: #a0a0a0;
+            grid-column: 1;
+        }
+
+        .return-date {
+            color: red;
+        }
+
+        .date {
+            grid-column: 2;
+        }
+
+        .time {
+            grid-column: 3;
+        }
+
+        .btn-group {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+            padding-top: 1rem;
+        }
+
+        .btn-row {
+            width: 100%;
+            display: flex;
+            gap: 15px;
+        }
+
+        .btn-change {
+            font-family: Kanit;
+            background-color: #FBBC04;
+            color: black;
+            border: none;
+            width: 100%;
+            height: 48px;
+            border-radius: 10px;
+            font-size: 16px;
+            align-items: center;
+            text-align: center;
+            cursor: pointer;
+            margin-right: 15px;
+        }
+
+        .btn-return {
+            font-family: Kanit;
+            background-color: #000000;
+            color: white;
+            border: none;
+            width: 100%;
+            height: 48px;
+            border-radius: 10px;
+            font-size: 16px;
+            align-items: center;
+            text-align: center;
+            cursor: pointer;
+        }
+
+        .btn-continue {
+            font-family: Kanit;
+            background-color: #DADADA;
+            color: white;
+            border: none;
+            width: 100%;
+            height: 48px;
+            border-radius: 10px;
+            font-size: 16px;
+            text-align: center;
+            cursor: pointer;
+        }
+
+        .btn-danger {
+            font-family: Kanit;
+            background-color: #FF0000;
+            color: white;
+            border: none;
+            width: 100%;
+            height: 48px;
+            border-radius: 10px;
+            font-size: 16px;
+            text-align: center;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <nav>
+            <svg class="btn-back" width="12" height="20" viewBox="0 0 12 20" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path
+                    d="M2.61526 9.99795L11.1073 1.27095C11.1772 1.20063 11.2325 1.11713 11.2699 1.0253C11.3073 0.933466 11.3262 0.835122 11.3253 0.735957C11.3245 0.636792 11.304 0.538775 11.2651 0.447578C11.2261 0.35638 11.1695 0.273814 11.0984 0.204657C11.0273 0.135499 10.9432 0.0811237 10.851 0.0446769C10.7588 0.00823013 10.6602 -0.00956431 10.5611 -0.0076766C10.4619 -0.00578889 10.3642 0.0157435 10.2734 0.0556744C10.1826 0.0956054 10.1007 0.153142 10.0323 0.224955L1.03226 9.47495C0.896042 9.61497 0.819824 9.80261 0.819824 9.99795C0.819824 10.1933 0.896042 10.3809 1.03226 10.521L10.0323 19.771C10.1007 19.8428 10.1826 19.9003 10.2734 19.9402C10.3642 19.9802 10.4619 20.0017 10.5611 20.0036C10.6602 20.0055 10.7588 19.9877 10.851 19.9512C10.9432 19.9148 11.0273 19.8604 11.0984 19.7913C11.1695 19.7221 11.2261 19.6395 11.2651 19.5483C11.304 19.4571 11.3245 19.3591 11.3253 19.26C11.3262 19.1608 11.3073 19.0624 11.2699 18.9706C11.2325 18.8788 11.1772 18.7953 11.1073 18.725L2.61526 9.99795Z"
+                    fill="black" />
+            </svg>
+            <img src="./public/HERO-01 2.svg" alt="" class="mx-auto d-block">
+        </nav>
+        <div class="container">
+            <h2>ข้อมูลเช่ารถ</h2>
+
+            <div>
+                <div class="container-rentDetail">
+                    <img src="./public/Rectangle 6167.svg" alt="">
+                    <div>
+                        <h4>WEDA AQUA SPECIFCATION</h4>
+                        <div class="rental-info">
+                            <div class="info-block">
+                                <h5 class="label">วันที่เช่ารถ</h5>
+                                <p class="date">05-08-2024</p>
+                                <p class="time">15.00 น.</p>
+                            </div>
+                            <div class="info-block">
+                                <h5 class="label return-date">วันที่คืนรถ</h5>
+                                <p class="date">10-08-2024</p>
+                                <p class="time">15.00 น.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <h3>กำลังเช่ารุ่นนี้อยู่</h3>
+                    <h5 class="label return-date">เวลาที่เหลือ 1 วัน</h5>
+                </div>
+
+                <!-- <div class="btn-row">
+                    <h5 class="label return-date">เวลาที่เหลือ เกินกำหนด</h5>
+                    <h5 class="label return-date">เลยกำหนดเวลา 360 นาที</h5>
+                </div> -->
+            </div>
+
+            <div class="btn-group">
+                <div class="btn-row">
+                    <button type="button" class="btn-change">เปลี่ยนรถ</button>
+                    <button type="button" class="btn-return">คืนรถ</button>
+                </div>
+                <button type="button" class="btn-continue">เช่าต่อ</button>
+            </div>
+
+            <!-- <div class="btn-group">
+                <button type="button" class="btn-danger">ชำระค่าปรับ</button>
+            </div> -->
+        </div>
+    </div>
+
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+
+</html>
