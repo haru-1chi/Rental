@@ -4,42 +4,141 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.6.0/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+    <title>Rental_1</title>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@500&display=swap" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous" />
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
+        crossorigin="anonymous"></script>
     <style>
-        .full-height {
-            height: 100vh;
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 10px;
+            width: 100%;
+            max-width: 347px;
+            border-bottom: #E3E3E3 solid 1px;
+            padding-bottom: 1rem;
         }
 
+        .container-fluid {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+            padding-top: 1rem;
+        }
+
+        h5 {
+            font-family: Kanit;
+            font-size: 18px;
+            font-weight: 700;
+            line-height: 20px;
+            text-align: left;
+            color: #4e4e4e;
+            margin-left: 1rem;
+        }
+
+        h4 {
+            font-family: Kanit;
+            font-size: 24px;
+            font-weight: 500;
+            line-height: 20px;
+            text-align: center;
+            color: #C1C1C1;
+            margin-top: 2rem;
+        }
+
+        .container {
+            min-height: calc(90vh - 90px);
+            width: 100%;
+            max-width: 400px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+
+        }
+
+
         .btn-custom {
-            background-color: #FF6F43;
+            font-family: Kanit;
+            background-color: #fc6336;
             color: white;
+            border: none;
+            padding: 10px 28px;
             border-radius: 10px;
+            font-size: 16px;
+            align-items: center;
+            text-align: center;
+            cursor: pointer;
+            box-shadow: #b9b9b9 0px 2px 10px 0px;
+        }
+
+        .svg-share {
+            margin-right: 0.5rem;
         }
     </style>
 </head>
 
-<body class="d-flex flex-column full-height">
-    <div class="container py-2 px-3">
-        <div class="d-flex align-items-center border-bottom pt-2 pb-3">
-            <i class="bi bi-chevron-left"></i>
-            <img src="./img/HERO-01 2.svg" alt="" class="mx-auto d-block">
+<body>
+    <div class="container-fluid">
+        <nav>
+            <svg class="btn-back" width="12" height="20" viewBox="0 0 12 20" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path
+                    d="M2.61526 9.99795L11.1073 1.27095C11.1772 1.20063 11.2325 1.11713 11.2699 1.0253C11.3073 0.933466 11.3262 0.835122 11.3253 0.735957C11.3245 0.636792 11.304 0.538775 11.2651 0.447578C11.2261 0.35638 11.1695 0.273814 11.0984 0.204657C11.0273 0.135499 10.9432 0.0811237 10.851 0.0446769C10.7588 0.00823013 10.6602 -0.00956431 10.5611 -0.0076766C10.4619 -0.00578889 10.3642 0.0157435 10.2734 0.0556744C10.1826 0.0956054 10.1007 0.153142 10.0323 0.224955L1.03226 9.47495C0.896042 9.61497 0.819824 9.80261 0.819824 9.99795C0.819824 10.1933 0.896042 10.3809 1.03226 10.521L10.0323 19.771C10.1007 19.8428 10.1826 19.9003 10.2734 19.9402C10.3642 19.9802 10.4619 20.0017 10.5611 20.0036C10.6602 20.0055 10.7588 19.9877 10.851 19.9512C10.9432 19.9148 11.0273 19.8604 11.0984 19.7913C11.1695 19.7221 11.2261 19.6395 11.2651 19.5483C11.304 19.4571 11.3245 19.3591 11.3253 19.26C11.3262 19.1608 11.3073 19.0624 11.2699 18.9706C11.2325 18.8788 11.1772 18.7953 11.1073 18.725L2.61526 9.99795Z"
+                    fill="black" />
+            </svg>
+            <img src="./public/HERO-01 2.svg" alt="" class="mx-auto d-block">
+        </nav>
+        <div class="container">
+            <h5>ข้อมูลเช่ารถ</h5>
+
+            <div class="container-placeholder">
+                <svg class="mx-auto d-block" width="85" height="52" viewBox="0 0 85 52" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M73.77 51.7138C79.836 51.7138 84.7534 46.7964 84.7534 40.7304C84.7534 34.6645 79.836 29.7471 73.77 29.7471C67.704 29.7471 62.7866 34.6645 62.7866 40.7304C62.7866 46.7964 67.704 51.7138 73.77 51.7138ZM73.7699 48.3365C77.9709 48.3365 81.3764 44.9309 81.3764 40.7299C81.3764 36.529 77.9709 33.1234 73.7699 33.1234C69.569 33.1234 66.1634 36.529 66.1634 40.7299C66.1634 44.9309 69.569 48.3365 73.7699 48.3365Z"
+                        fill="#CBCBCB" />
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M15.3056 51.498C21.3716 51.498 26.289 46.5806 26.289 40.5146C26.289 34.4487 21.3716 29.5312 15.3056 29.5312C9.23969 29.5312 4.32227 34.4487 4.32227 40.5146C4.32227 46.5806 9.23969 51.498 15.3056 51.498ZM15.3056 48.1207C19.5066 48.1207 22.9121 44.7151 22.9121 40.5142C22.9121 36.3132 19.5066 32.9076 15.3056 32.9076C11.1046 32.9076 7.69909 36.3132 7.69909 40.5142C7.69909 44.7151 11.1046 48.1207 15.3056 48.1207Z"
+                        fill="#CBCBCB" />
+                    <circle cx="15.3057" cy="40.5152" r="6.07962" fill="#CBCBCB" />
+                    <circle cx="73.8234" cy="40.61" r="3.93329" fill="#CBCBCB" />
+                    <path d="M14.2293 37.0207L36.0906 31.9287L32.0712 44.7477L13.721 43.2504L14.2293 37.0207Z"
+                        fill="#CBCBCB" />
+                    <rect x="66.6602" y="24.4473" width="10.1993" height="3.63976"
+                        transform="rotate(60 66.6602 24.4473)" fill="#CBCBCB" />
+                    <rect x="69.2817" y="30.5156" width="11.5137" height="2.03135"
+                        transform="rotate(60 69.2817 30.5156)" fill="#CBCBCB" />
+                    <path
+                        d="M9.63777 13.099C6.68956 13.1629 7.12937 14.0301 8.85175 15.9484C7.6155 16.3345 7.64615 16.88 8.26221 18.1099L9.6377 20.2714C10.5796 21.353 10.6178 21.9561 9.53945 23.0224C6.72298 26.8214 1.05072 34.5372 0.893525 35.0088C0.736326 35.4804 2.20355 35.4018 2.95682 35.3036C6.32145 30.1062 12.4912 25.9946 16.0178 24.9687C16.0178 24.9687 18.9673 24.3916 21.2115 25.6099C23.4557 26.8282 23.2633 26.8282 27.8158 30.2907C31.9836 34.0096 28.4704 38.0724 28.1087 41.5916C28.561 45.352 30.139 45.8046 33.1194 46.4058C33.1194 46.4058 48.2442 48.5635 51.9314 49.0698C56.4094 49.4324 58.6627 48.6055 60.5311 46.111C62.3994 43.6166 62.5453 33.7926 63.5768 31.9631C64.6083 30.1336 70.2935 28.6431 70.2935 28.6431C70.2935 28.6431 75.0637 27.3041 84.7987 31.1771C86.5992 28.8871 74.5808 24.7909 74.5808 24.7909C73.1138 23.4444 72.927 22.4403 73.4018 21.8434C72.8848 21.4696 74.8346 21.6674 73.2224 18.0935C71.6102 14.5196 58.0769 8.64993 58.1731 7.99019C58.2693 7.33046 61.375 8.06791 62.345 7.51822C63.0154 6.36339 61.9805 4.67884 61.7101 4.15846C61.4397 3.63808 58.8381 1.16785 55.9488 0.685547C52.0391 1.18798 49.962 1.55064 48.4464 4.35492C47.4519 4.1878 46.7744 4.30812 45.4989 4.64956C44.3615 5.87782 44.4249 6.37112 46.2849 6.81105C46.7156 6.18926 47.0335 5.9624 47.8569 6.12335L49.2324 6.71286C49.2324 6.71286 53.7768 14.5145 54.3691 15.4634C54.9614 16.4124 54.1321 18.1721 54.1321 18.1721C53.7597 19.9327 55.561 17.7788 55.4221 20.4678C55.2832 23.1568 54.9769 38.866 52.5729 38.644C50.1689 38.4219 45.8919 36.9737 45.8919 36.9737L43.3374 29.212L43.2691 25.3747C44.7193 25.4312 45.4006 24.1096 45.8919 23.317C45.1259 21.2242 45.3581 16.1245 37.1524 16.1998C20.4409 17.5105 24.0021 14.676 9.63777 13.099Z"
+                        fill="#CBCBCB" />
+                    <path
+                        d="M67.4963 18.7246L65.8601 21.997L64.2239 18.7246M62.8603 18.7246H60.6787V21.997H62.8603M60.6787 20.3608H62.3149"
+                        stroke="white" stroke-width="0.5" stroke-linecap="round" stroke-linejoin="round" />
+                    <path
+                        d="M58.4971 21.997V18.7246C58.4971 17.8567 58.8418 17.0243 59.4555 16.4106C60.0692 15.7969 60.9016 15.4521 61.7695 15.4521H66.1328C67.0007 15.4521 67.833 15.7969 68.4467 16.4106C69.0604 17.0243 69.4052 17.8567 69.4052 18.7246V21.997C69.4052 22.8649 69.0604 23.6973 68.4467 24.311C67.833 24.9247 67.0007 25.2695 66.1328 25.2695H61.7695C60.9016 25.2695 60.0692 24.9247 59.4555 24.311C58.8418 23.6973 58.4971 22.8649 58.4971 21.997Z"
+                        stroke="white" stroke-width="0.5" />
+                </svg>
+                <h4 class="">ไม่มีรายการเช่ารถ</h4>
+            </div>
+
+            <button type="button" class="btn-custom">
+                <svg class="svg-share" width="25" height="26" viewBox="0 0 25 26" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M12.2297 0.682617C5.49058 0.682617 0.0273438 6.14586 0.0273438 12.885C0.0273438 19.6245 5.49058 25.0874 12.2297 25.0874C18.9693 25.0874 24.4321 19.6245 24.4321 12.885C24.4321 6.14586 18.9693 0.682617 12.2297 0.682617ZM12.2297 23.5861C6.34246 23.5861 1.55264 18.7723 1.55264 12.885C1.55264 6.99769 6.34246 2.20787 12.2297 2.20787C18.117 2.20787 22.9068 6.99771 22.9068 12.885C22.9068 18.7722 18.117 23.5861 12.2297 23.5861ZM17.5683 12.1224H12.9924V7.54646C12.9924 7.12548 12.6507 6.78381 12.2297 6.78381C11.8088 6.78381 11.4671 7.12548 11.4671 7.54646V12.1224H6.89119C6.47021 12.1224 6.12854 12.464 6.12854 12.885C6.12854 13.306 6.47021 13.6477 6.89119 13.6477H11.4671V18.2236C11.4671 18.6445 11.8088 18.9862 12.2297 18.9862C12.6507 18.9862 12.9924 18.6445 12.9924 18.2236V13.6477H17.5683C17.9893 13.6477 18.3309 13.306 18.3309 12.885C18.3309 12.464 17.9893 12.1224 17.5683 12.1224Z"
+                        fill="white" />
+                </svg>
+                เพิ่มรถเช่า
+            </button>
         </div>
-        <h5 class="m-3">ข้อมูลเช่ารถ</h5>
     </div>
 
-    <div class="d-flex flex-column justify-content-center align-items-center flex-grow-1">
-        <img src="./img/Group 1000002137.svg" alt="" class="mx-auto d-block">
-        <h4 class="m-3 text-center text-black-50">ไม่มีรายการเช่ารถ</h4>
-    </div>
-
-    <div class="container mb-5">
-        <button type="button" class="btn btn-custom btn-lg btn-block"><i class="bi bi-plus-circle"></i> เพิ่มรถเช่า</button>
-    </div>
-    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
-    <script src="js/bootstrap.min.js"></script>
 </body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
 
 </html>

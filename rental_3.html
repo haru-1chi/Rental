@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rental_3</title>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@500&display=swap" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous" />
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
+        crossorigin="anonymous"></script>
+    <style>
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 10px;
+            width: 100%;
+            max-width: 347px;
+            border-bottom: #E3E3E3 solid 1px;
+            padding-bottom: 1rem;
+        }
+
+        .container-fluid {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 2rem;
+        }
+
+        .container-input {
+            display: flex;
+            width: 100%;
+        }
+
+        input {
+            width: 100%;
+            border: #D9D9D9 solid 1px;
+            border-radius: 6px;
+        }
+
+        h2 {
+            margin-top: 1rem;
+            font-family: Kanit;
+            font-size: 16px;
+            font-weight: 300;
+            line-height: 20px;
+            text-align: left;
+            color: #000000;
+        }
+
+        h3 {
+            margin: 0;
+            padding: 0;
+            margin-right: 2rem;
+            font-family: Kanit;
+            font-size: 15px;
+            font-weight: 275;
+            line-height: 20px;
+            text-align: center;
+            color: #34A853
+        }
+
+        p {
+            font-family: Kanit;
+            font-size: 12px;
+            font-weight: 275;
+            color: #7D756C;
+        }
+
+        h5 {
+            font-family: Kanit;
+            font-size: 18px;
+            font-weight: 700;
+            line-height: 20px;
+            text-align: left;
+            color: #4e4e4e;
+            margin-left: 1rem;
+        }
+
+        h4 {
+            font-family: Kanit;
+            font-size: 24px;
+            font-weight: 500;
+            line-height: 20px;
+            text-align: center;
+            color: #C1C1C1;
+            margin-top: 2rem;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 400px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        img {
+            width: 30%;
+            height: auto;
+            object-fit: contain;
+        }
+
+        img.battery {
+            width: 10%;
+            height: auto;
+            object-fit: contain;
+            align-self: start;
+        }
+
+        .container-detail {
+            border: #0000001A solid 1px;
+            border-radius: 12px;
+            padding: 15px;
+            width: 100%;
+            max-width: 400px;
+            margin-bottom: 2rem;
+
+        }
+        
+        .detail {
+            width: 100%;
+            max-width: 400px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .detail-status {
+            margin-top: 2rem;
+            border-bottom: #0000001A solid 1px;
+            margin-bottom: 2rem;
+            padding-bottom: 1rem;
+            width: 100%;
+            max-width: 400px;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .photo-section {
+            width: 100%;
+            max-width: 400px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .detail-header {
+            background-color: #afaeae3d;
+            border-radius: 12px 12px 0px 0px;
+            width: 100%;
+            padding-top: 0.25px;
+            padding-bottom: 0.25px;
+        }
+
+        p {
+            font-family: Kanit;
+            margin: 0px;
+            padding: 0px;
+        }
+
+        .detail-header p {
+            font-family: Kanit;
+            font-size: 16px;
+            font-weight: 300;
+            line-height: 20px;
+            text-align: left;
+            padding-top: 5px;
+            padding-bottom: 5px;
+            margin-left: 1rem;
+            color: #FC6336;
+        }
+
+        .detail-body {
+            padding-left: 2rem;
+            width: 100%;
+            padding-bottom: 0.25px;
+        }
+
+        .photo-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
+            width: 100%;
+            padding: 10px 0;
+            justify-items: center;
+        }
+
+        .btn-custom {
+            font-family: Kanit;
+            background-color: #fc6336;
+            color: white;
+            border: none;
+            padding: 10px 28px;
+            border-radius: 10px;
+            font-size: 16px;
+            align-items: center;
+            text-align: center;
+            cursor: pointer;
+            box-shadow: #b9b9b9 0px 2px 10px 0px;
+        }
+
+        .svg-share {
+            margin-right: 0.5rem;
+        }
+
+        .btn-custom {
+            font-family: Kanit;
+            background-color: #34A853;
+            color: white;
+            border: none;
+            padding: 10px 28px;
+            border-radius: 10px;
+            font-size: 16px;
+            align-items: center;
+            text-align: center;
+            cursor: pointer;
+            box-shadow: #b9b9b9 0px 2px 10px 0px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <nav>
+            <svg class="btn-back" width="12" height="20" viewBox="0 0 12 20" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path
+                    d="M2.61526 9.99795L11.1073 1.27095C11.1772 1.20063 11.2325 1.11713 11.2699 1.0253C11.3073 0.933466 11.3262 0.835122 11.3253 0.735957C11.3245 0.636792 11.304 0.538775 11.2651 0.447578C11.2261 0.35638 11.1695 0.273814 11.0984 0.204657C11.0273 0.135499 10.9432 0.0811237 10.851 0.0446769C10.7588 0.00823013 10.6602 -0.00956431 10.5611 -0.0076766C10.4619 -0.00578889 10.3642 0.0157435 10.2734 0.0556744C10.1826 0.0956054 10.1007 0.153142 10.0323 0.224955L1.03226 9.47495C0.896042 9.61497 0.819824 9.80261 0.819824 9.99795C0.819824 10.1933 0.896042 10.3809 1.03226 10.521L10.0323 19.771C10.1007 19.8428 10.1826 19.9003 10.2734 19.9402C10.3642 19.9802 10.4619 20.0017 10.5611 20.0036C10.6602 20.0055 10.7588 19.9877 10.851 19.9512C10.9432 19.9148 11.0273 19.8604 11.0984 19.7913C11.1695 19.7221 11.2261 19.6395 11.2651 19.5483C11.304 19.4571 11.3245 19.3591 11.3253 19.26C11.3262 19.1608 11.3073 19.0624 11.2699 18.9706C11.2325 18.8788 11.1772 18.7953 11.1073 18.725L2.61526 9.99795Z"
+                    fill="black" />
+            </svg>
+            <img src="./public/HERO-01 2.svg" alt="" class="mx-auto d-block">
+        </nav>
+
+        <div class="container">
+            <h2>รายการเช่ารถ</h2>
+
+            <div class="container-detail">
+                <div class="detail">
+                    <img src="./public/Rectangle 6167.svg" alt="Main Image">
+                    <div class="detail-body"></div>
+                    <img src="./public/Vector (1).svg" alt="Battery Icon" class="battery">
+                </div>
+                <div class="detail-status">
+                    <h3>ชำระเงินเรียบร้อย</h3>
+                    <p>คืนรถ 20/08/2567 15.00 น.</p>
+                </div>
+            </div>
+
+            <button type="button" class="btn-custom">
+                สแกน QR-Code รถ
+            </button>
+        </div>
+    </div>
+
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+<script>
+    $(document).ready(function () {
+        let specList = [
+            {
+                id: 1,
+                name: "มอเตอร์",
+                value: "2,000 วัตต์",
+            },
+            {
+                id: 2,
+                name: "ความเร็ว",
+                value: "80 กม. / ชม.",
+            },
+            {
+                id: 3,
+                name: "ระยะเวลาชาร์จ",
+                value: "4 ชั่วโมง",
+            },
+            {
+                id: 4,
+                name: "ระยะวิ่ง",
+                value: "80 กม.",
+            },
+            {
+                id: 5,
+                name: "72V316ah",
+                value: "Lithium Battery",
+            }
+        ];
+
+
+        specList.forEach((item, index) => {
+            $(".detail-body").append(`
+          <div class="flex py-2">
+              <p class="kanit text-sm">${item.name}  ${item.value}</p>
+            </div>
+        `);
+        });
+    });
+
+</script>
+
+</html>
