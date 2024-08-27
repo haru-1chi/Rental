@@ -355,7 +355,7 @@
         specList.forEach((item, index) => {
             $(".detail-body").append(`
             <div class="row py-2">
-                <div class="col-5 center">
+                <div class="col-6 center">
                     <p class="kanit text-sm text-right">${item.name}</p>
                 </div>
                 <div class="col-6 center text-orange">
@@ -407,7 +407,7 @@
             $(`#fileInput-${id}`).trigger("click");
         });
 
-        let files = {}; // Object to store selected files
+        let files = {};
 
         $("input[type='file']").on("change", function (e) {
             const input = e.target;
